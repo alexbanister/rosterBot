@@ -14,14 +14,11 @@ a {
 
 .app {
   display: flex;
-  flex-direction: row;
-  width: 100vw;
-  min-height: 100vh; }
+  flex-direction: row; }
 
 main {
-  width: 65vw;
-  overflow-y: scroll;
-  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
   padding: 3em;
   background: rgba(64, 95, 115, 0.6); }
 

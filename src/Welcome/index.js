@@ -1,4 +1,5 @@
 import React from 'react';
+import CreateTeam from '../CreateTeam/';
 import './styles.css';
 
 const Welcome = () => {
@@ -6,9 +7,7 @@ const Welcome = () => {
     <div className='welcome'>
       <h3>Welcome to RosterBot</h3>
       <h3>Create your team</h3>
-      <span className='form-block'>
-        <h4>Name</h4>
-      </span>
+      <CreateTeam />
     </div>
   );
 };

@@ -7,6 +7,8 @@
   flex-wrap: wrap;
   padding: 3em;
   h3 {
+    width: 100%;
+    text-align: center;
     font-size: 3em;
     color: $highlight;
     margin: 0;
@@ -14,15 +16,5 @@
   }
   p {
     font-size: 1.5em;
-  }
-  .auth {
-    display: flex;
-    justify-content: center;
-  }
-  .form-block {
-    background: $body-light;
-    border: 3px solid $highlight-dark;
-    padding: 1em;
-    margin: 2em;
   }
 }
