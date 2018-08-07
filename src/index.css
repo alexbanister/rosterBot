@@ -2,3 +2,5 @@
 @import "https://fonts.googleapis.com/css?family=Quicksand:400,700";
 @import "App/styles.css";
 @import "Welcome/styles.css";
+@import "CreateTeam/styles.css";
+@import "CreateRoster/styles.css";

@@ -1,15 +1,30 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CreateTeam from '../CreateTeam/';
+import CreateRoster from '../CreateRoster/';
+import { connect } from 'react-redux';
 import './styles.css';
 
-const Welcome = () => {
+const Welcome = ({ teamName }) => {
+  const setFormStep = (teamName) => {
+    return teamName ? <CreateTeam /> : <CreateRoster />;
+  };
+
   return (
     <div className='welcome'>
       <h3>Welcome to RosterBot</h3>
-      <h3>Create your team</h3>
-      <CreateTeam />
+      { setFormStep(teamName) }
     </div>
   );
 };
 
-export default Welcome;
+Welcome.propTypes ={
+  teamName: PropTypes.string
+};
+
+const mapStateToProps =  (store) => ({
+  teamName: store.teamName,
+  rosters: store.rosters
+});
+
+export default connect(mapStateToProps)(Welcome);

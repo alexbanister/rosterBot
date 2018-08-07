@@ -25,6 +25,7 @@ export class CreateTeam extends Component {
   render() {
     return (
       <div className='createTeam'>
+        <h3>Create your team</h3>
         <form onSubmit={(event) => this.saveTeamName(event, this.state.teamName)}>
           <input
             type='text'
