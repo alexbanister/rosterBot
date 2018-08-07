@@ -1,0 +1,21 @@
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3em; }
+  .welcome h3 {
+    font-size: 3em;
+    color: #F6D22F;
+    margin: 0;
+    padding: 0; }
+  .welcome p {
+    font-size: 1.5em; }
+  .welcome .auth {
+    display: flex;
+    justify-content: center; }
+  .welcome .form-block {
+    background: #405F73;
+    border: 3px solid #AEE173;
+    padding: 1em;
+    margin: 2em; }

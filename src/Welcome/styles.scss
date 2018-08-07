@@ -1,0 +1,28 @@
+@import "../variables.scss";
+
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3em;
+  h3 {
+    font-size: 3em;
+    color: $highlight;
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    font-size: 1.5em;
+  }
+  .auth {
+    display: flex;
+    justify-content: center;
+  }
+  .form-block {
+    background: $body-light;
+    border: 3px solid $highlight-dark;
+    padding: 1em;
+    margin: 2em;
+  }
+}

@@ -1,0 +1,36 @@
+@import "../variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: $background;
+  font-family: 'Quicksand', sans-serif;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    color: $highlight-dark;
+  }
+}
+.app {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  min-height: 100vh;
+}
+main {
+  width: 65vw;
+  overflow-y: scroll;
+  height: 100vh;
+  padding: 3em;
+  background: $main-background;
+}
+
+input, button, select {
+  font-size: 1.25rem;
+  padding: .5rem;
+  height: 2.5rem;
+}
