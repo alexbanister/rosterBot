@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { saveTeamName } from './actions';
 
 export class CreateTeam extends Component {
   constructor() {
@@ -14,10 +17,15 @@ export class CreateTeam extends Component {
     });
   }
 
+  saveTeamName(event, teamName) {
+    event.preventDefault();
+    this.props.saveTeamName(teamName);
+  }
+
   render() {
     return (
       <div className='createTeam'>
-        <form onSubmit={(event) => this.handleSignUp(event)}>
+        <form onSubmit={(event) => this.saveTeamName(event, this.state.teamName)}>
           <input
             type='text'
             placeholder='Team Name'
@@ -33,4 +41,15 @@ export class CreateTeam extends Component {
   }
 }
 
-export default CreateTeam;
+CreateTeam.propTypes ={
+  saveTeamName: PropTypes.func,
+  teamName: PropTypes.string
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  saveTeamName: (teamName) => {
+    dispatch(saveTeamName(teamName));
+  }
+});
+
+export default connect(null, mapDispatchToProps)(CreateTeam);
