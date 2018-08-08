@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { saveTeamName } from './actions';
+import { saveRoster, updateRosterID } from './actions';
 import PlayerInput from '../PlayerInput';
 
 export class RosterEditable extends Component {
   constructor({...props}) {
     super();
     this.state = {
-      starterCount: 3,
+      starterCount: 1,
       subCount: 1,
       rosterNameError: 'clean',
       errorMessages: {
-        duplicateName: 'Player names must be unique',
+        duplicateName: 'Player name already taken',
         statOverMax: 'Total of all stats must be less than 100',
         duplicateStat: 'Player stat totals must be unique',
         nameRequired: 'Player first and last name is required'
@@ -118,7 +118,7 @@ export class RosterEditable extends Component {
   }
 
   getStatTotal({ speed, agility, strength }){
-    const total = this.keepAsNumber(speed) + this.keepAsNumber(agility) + this.keepAsNumber(strength);
+    const total = speed + agility + strength;
     const ifError = total > 100 ? 'error' : 'clean';
     return <div className={ifError}>{total}</div>;
   }
@@ -146,6 +146,31 @@ export class RosterEditable extends Component {
         />);
     }
     return form;
+  }
+
+  setPlayerID({ firstName, lastName, speed, agility, strength }, rosterID) {
+    let stat = (speed + agility + strength).toString();
+    while (stat.length < 3){
+      stat = `0${stat}`;
+    }
+    return `${firstName[0]}${lastName[0]}${rosterID}${stat}`.slice(0, 6);
+  }
+
+  prepRoster(name, roster) {
+    const players = Object.keys(roster);
+    const rosterWithIDs = {};
+    players.forEach(player => {
+      rosterWithIDs[player] = Object.assign({},
+        roster[player],
+        { id: this.setPlayerID(roster[player], this.props.rosterID) }
+      );
+    });
+    const completeRoster = {
+      name,
+      id: this.props.rosterID,
+      roster: rosterWithIDs
+    };
+    return completeRoster;
   }
 
   render() {
@@ -178,6 +203,8 @@ export class RosterEditable extends Component {
         <h3>Create a Roster</h3>
         <form onSubmit={(event) => {
           event.preventDefault();
+          this.props.saveRoster(this.prepRoster(this.state.rosterName, this.state.roster));
+          this.props.updateRosterID();
         }
         }>
           <div className={`form-block ${this.state.rosterNameError}`}>
@@ -205,11 +232,11 @@ export class RosterEditable extends Component {
           </table>
           <button
             type='submit'
-            disabled={this.validateRoster(
-              this.state.rosterName,
-              this.state.roster,
-              this.state.errors,
-              this.state.starterCount + this.state.subCount)}
+            // disabled={this.validateRoster(
+            //   this.state.rosterName,
+            //   this.state.roster,
+            //   this.state.errors,
+            //   this.state.starterCount + this.state.subCount)}
           >
               Save Roster
           </button>
@@ -221,13 +248,25 @@ export class RosterEditable extends Component {
 
 RosterEditable.propTypes ={
   rosterName: PropTypes.string,
-  roster: PropTypes.object
+  roster: PropTypes.object,
+  rosterID: PropTypes.number,
+  saveRoster: PropTypes.func,
+  updateRosterID: PropTypes.func
 };
 
+const mapStateToProps =  (store) => ({
+  rosterName: store.teamName,
+  rosters: store.rosters,
+  rosterID: store.rostersID.id
+});
+
 const mapDispatchToProps = (dispatch) => ({
-  saveTeamName: (teamName) => {
-    dispatch(saveTeamName(teamName));
+  saveRoster: (roster) => {
+    dispatch(saveRoster(roster));
+  },
+  updateRosterID: (id) => {
+    dispatch(updateRosterID(id));
   }
 });
 
-export default connect(null, mapDispatchToProps)(RosterEditable);
+export default connect(mapStateToProps, mapDispatchToProps)(RosterEditable);
