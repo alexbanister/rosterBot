@@ -30,13 +30,20 @@ export class PlayerInput extends Component {
     return speed + agility + strength;
   }
 
+  displayErrorMessages(messages) {
+    return messages.map((message, iter) => {
+      return <li key={iter}>{message}</li>;
+    });
+  }
+
   render() {
-    const isError = this.props.errors ? 'error' : 'clean';
+    const isError = this.props.error ? 'error' : 'clean';
     return (
       <tr className={`playerInput ${isError}`}>
         <td>
           <input
             type='text'
+            name={`${this.props.name}FirstName`}
             placeholder='First Name'
             value={this.state.firstName}
             onChange={(event) => this.handleChange('firstName', event.target.value)}
@@ -46,37 +53,53 @@ export class PlayerInput extends Component {
         <td>
           <input
             type='text'
+            name={`${this.props.name}LastName`}
             placeholder='Last Name'
             value={this.state.lastName}
             onChange={(event) => this.handleChange('lastName', event.target.value)}
-            onBlur={() => this.props.savePlayer(this.state)}
+            onBlur={() => {
+              this.props.savePlayer(this.state);
+              this.props.validatePlayer(this.state);
+            }}
           />
         </td>
         <td>
           <input
             type='number'
+            name={`${this.props.name}Speed`}
             className='attr'
             value={this.state.speed}
             onChange={(event) => this.handleChange('speed', this.keepAsNumber(event.target.value, 10))}
-            onBlur={() => this.props.savePlayer(this.state)}
+            onBlur={() => {
+              this.props.savePlayer(this.state);
+              this.props.validatePlayer(this.state);
+            }}
           />
         </td>
         <td>
           <input
             type='number'
+            name={`${this.props.name}Strength`}
             className='attr'
             value={this.state.strength}
             onChange={(event) => this.handleChange('strength', this.keepAsNumber(event.target.value, 10))}
-            onBlur={() => this.props.savePlayer(this.state)}
+            onBlur={() => {
+              this.props.savePlayer(this.state);
+              this.props.validatePlayer(this.state);
+            }}
           />
         </td>
         <td>
           <input
             type='number'
+            name={`${this.props.name}Agility`}
             className='attr'
             value={this.state.agility}
             onChange={(event) => this.handleChange('agility', this.keepAsNumber(event.target.value, 10))}
-            onBlur={() => this.props.savePlayer(this.state)}
+            onBlur={() => {
+              this.props.savePlayer(this.state);
+              this.props.validatePlayer(this.state);
+            }}
           />
         </td>
         <td>
@@ -86,7 +109,10 @@ export class PlayerInput extends Component {
           <div className='tooltip'>
             <img src={process.env.PUBLIC_URL + '/warning.svg'} alt='Error Icon'/>
             <span className='tooltiptext'>
-              {this.props.errorMessage}
+              <h5>Errors!</h5>
+              <ul>
+                {this.displayErrorMessages(this.props.errorMessage)}
+              </ul>
             </span>
           </div>
         </td>
@@ -102,9 +128,10 @@ PlayerInput.propTypes ={
   strength: PropTypes.number,
   agility: PropTypes.number,
   role: PropTypes.string,
-  errorMessage: PropTypes.string,
-  errors: PropTypes.number,
-  savePlayer: PropTypes.func
+  errorMessage: PropTypes.array,
+  error: PropTypes.bool,
+  savePlayer: PropTypes.func,
+  validatePlayer: PropTypes.func
 };
 
 export default PlayerInput;

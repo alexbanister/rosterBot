@@ -11,13 +11,10 @@ export class RosterEditable extends Component {
       starterCount: 3,
       subCount: 1,
       errorMessages: {
-        '1': 'Player names must be unique',
-        '2': 'Total of all stats must be less than 100',
-        '3': 'Player names must be unique and total of all stats must be less than 100',
-        '4': 'Player stat totals must be unique',
-        '5': 'Player names and stat totals must be unique',
-        '6': 'Player stat totals must be unique, and Total of all stats must be less than 100',
-        '7': 'Player names and stat totals must be unique, and Total of all stats must be less than 100'
+        duplicateName: 'Player names must be unique',
+        statOverMax: 'Total of all stats must be less than 100',
+        duplicateStat: 'Player stat totals must be unique',
+        nameRequired: 'Player first and last name is required'
       },
       errors: {},
       rosterName: props.rosterName || '',
@@ -56,8 +53,45 @@ export class RosterEditable extends Component {
         this.state.roster[player].strength;
       return stat === total;
     });
-    console.log(dupes);
     return dupes.length > 0;
+  }
+
+  checkStatError({ speed, agility, strength }) {
+    return speed + agility + strength > 100;
+  }
+
+  checkNameNotNull(name) {
+    return name.length < 1;
+  }
+
+  validatePlayer(player, key) {
+    let isError = false;
+    const errorMessages = [];
+    if (this.checkDuplicateName(`${player.firstName} ${player.lastName}`, key)) {
+      isError = true;
+      errorMessages.push(this.state.errorMessages.duplicateName);
+    }
+    if (this.checkStatError(player)) {
+      isError = true;
+      errorMessages.push(this.state.errorMessages.statOverMax);
+    }
+    if (this.checkDuplicateStat(player.speed + player.agility + player.strength, key)) {
+      isError = true;
+      errorMessages.push(this.state.errorMessages.duplicateStat);
+    }
+    if (this.checkNameNotNull(player.firstName) || this.checkNameNotNull(player.lastName)) {
+      isError = true;
+      errorMessages.push(this.state.errorMessages.nameRequired);
+    }
+    const errors = Object.assign({}, this.state.errors, {
+      [key]: {
+        isError,
+        errorMessages
+      }
+    });
+    this.setState({
+      errors
+    });
   }
 
   getStatTotal({ speed, agility, strength }){
@@ -66,34 +100,25 @@ export class RosterEditable extends Component {
     return <div className={ifError}>{total}</div>;
   }
 
-  checkStatError({ speed, agility, strength }) {
-    return speed + agility + strength > 100;
-  }
-
   savePlayer(player, key) {
-    const isDuplicateName = this.checkDuplicateName(`${player.firstName} ${player.lastName}`, key) ? 1 : 0;
-    const isStatOver = this.checkStatError(player) ? 2 : 0;
-    const isStatDuplicate = this.checkDuplicateStat(player.speed + player.agility + player.strength, key) ? 4 : 0;
-    const errors = Object.assign({}, this.state.errors, { [key]: isDuplicateName + isStatOver + isStatDuplicate });
     const roster = Object.assign({}, this.state.roster, { [key]: player });
-    this.setState({
-      roster,
-      errors
-    });
+    this.setState({ roster });
   }
 
   buildPlayerForm(count, role){
     const form = [];
     for (let iter = 0; iter < count; iter++) {
       const key = `${role}${iter}`;
-      const error = this.state.errors[key];
-      const message = error ? this.state.errorMessages[error] : null;
+      let isError = this.state.errors[key] ? this.state.errors[key].isError : false;
+      const errorMessages = this.state.errors[key] ? this.state.errors[key].errorMessages : [];
       form.push(
         <PlayerInput
           key={key}
+          name={key}
           role={role}
-          errors={error}
-          errorMessage={message}
+          error={isError}
+          errorMessage={errorMessages}
+          validatePlayer={(player) => this.validatePlayer(player, key)}
           savePlayer={(player) => this.savePlayer(player, key)}
         />);
     }
@@ -130,7 +155,6 @@ export class RosterEditable extends Component {
         <h3>Create a Roster</h3>
         <form onSubmit={(event) => {
           event.preventDefault();
-          console.log('hi')
         }
         }>
           <div className='form-block'>
