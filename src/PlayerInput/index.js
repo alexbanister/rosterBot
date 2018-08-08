@@ -103,6 +103,7 @@ PlayerInput.propTypes ={
   agility: PropTypes.number,
   role: PropTypes.string,
   errorMessage: PropTypes.string,
+  errors: PropTypes.number,
   savePlayer: PropTypes.func
 };
 

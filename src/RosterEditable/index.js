@@ -37,7 +37,8 @@ export class RosterEditable extends Component {
       if (player === key) {
         return false;
       }
-      return name === `${this.state.roster[player].firstName} ${this.state.roster[player].lastName}`;
+      return name.toLowerCase() ===
+        `${this.state.roster[player].firstName} ${this.state.roster[player].lastName}`.toLowerCase();
     });
     return dupes.length > 0;
   }
@@ -48,11 +49,14 @@ export class RosterEditable extends Component {
       if (player === key) {
         return false;
       }
-      return stat ===
+
+      const total =
         this.state.roster[player].speed +
         this.state.roster[player].agility +
-        this.state.roster[player].agility;
+        this.state.roster[player].strength;
+      return stat === total;
     });
+    console.log(dupes);
     return dupes.length > 0;
   }
 
@@ -69,7 +73,7 @@ export class RosterEditable extends Component {
   savePlayer(player, key) {
     const isDuplicateName = this.checkDuplicateName(`${player.firstName} ${player.lastName}`, key) ? 1 : 0;
     const isStatOver = this.checkStatError(player) ? 2 : 0;
-    const isStatDuplicate = this.checkDuplicateStat(player) ? 4 : 0;
+    const isStatDuplicate = this.checkDuplicateStat(player.speed + player.agility + player.strength, key) ? 4 : 0;
     const errors = Object.assign({}, this.state.errors, { [key]: isDuplicateName + isStatOver + isStatDuplicate });
     const roster = Object.assign({}, this.state.roster, { [key]: player });
     this.setState({
