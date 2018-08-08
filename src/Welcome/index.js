@@ -5,7 +5,7 @@ import RosterEditable from '../RosterEditable/';
 import { connect } from 'react-redux';
 import './styles.css';
 
-const Welcome = ({ teamName }) => {
+export const Welcome = ({ teamName }) => {
   const setFormStep = (teamName) => {
     return teamName ? <CreateTeam /> : <RosterEditable />;
   };

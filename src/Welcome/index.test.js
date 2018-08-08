@@ -1,5 +1,5 @@
 import { shallow } from 'enzyme';
-import Welcome from './index';
+import { Welcome } from './index';
 import React from 'react';
 
 

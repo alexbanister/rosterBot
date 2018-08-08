@@ -1,13 +1,28 @@
 import * as actions from './actions';
 
-describe('CreateTeam action', ()=>{
-  it('SAVE_TEAM_NAME should take a string and return an action', () => {
-    const teamName = 'Super Happy Fun Time';
+describe('RosterEditable action', ()=>{
+  it('SAVE_ROSTER should take a roster and return an action', () => {
+    const roster = {
+      name: '3rd Friday Lineup',
+      id: 3,
+      roster: {
+        starter0: {
+          name: 'Bob'
+        }
+      }
+    };
     const expected = {
-      type: 'SAVE_TEAM_NAME',
-      teamName: 'Super Happy Fun Time'
+      type: 'SAVE_ROSTER',
+      roster
     };
 
-    expect(actions.saveTeamName(teamName)).toEqual(expected);
+    expect(actions.saveRoster(roster)).toEqual(expected);
+  });
+  it('UPDATE_ROSTER_ID should take no value and return an action', () => {
+    const expected = {
+      type: 'UPDATE_ROSTER_ID'
+    };
+
+    expect(actions.updateRosterID()).toEqual(expected);
   });
 });

@@ -1,18 +1,26 @@
 import * as reducers from './reducers';
 
-describe('CreateTeam Reducers', () => {
-  it('teamName should set default state', () => {
-    const expectation = '';
+describe('RosterEditable Reducers', () => {
+  it('rosters should set default state', () => {
+    const expectation = [];
 
-    expect(reducers.teamName(undefined, '')).toEqual(expectation);
+    expect(reducers.rosters(undefined, '')).toEqual(expectation);
   });
 
-  it('teamName should update', () => {
+  it('rosters should update', () => {
     const action = {
-      type: 'SAVE_TEAM_NAME',
-      teamName: 'Super Happy Fun Time'
+      type: 'SAVE_ROSTER',
+      roster: {
+        name: '3rd Friday Lineup',
+        id: 3,
+        roster: {
+          starter0: {
+            name: 'Bob'
+          }
+        }
+      }
     };
 
-    expect(reducers.teamName(undefined, action)).toEqual(action.teamName);
+    expect(reducers.rosters(undefined, action)).toEqual([action.roster]);
   });
 });

@@ -153,7 +153,7 @@ export class RosterEditable extends Component {
     while (stat.length < 3){
       stat = `0${stat}`;
     }
-    return `${firstName[0]}${lastName[0]}${rosterID}${stat}`.slice(0, 6);
+    return `${firstName[0]}${lastName[0]}${stat}${rosterID}`.slice(0, 6);
   }
 
   prepRoster(name, roster) {
