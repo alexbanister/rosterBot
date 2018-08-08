@@ -1,6 +1,16 @@
 @import "../variables.scss";
 
 .playerInput {
+  .form-block {
+    border: 1px solid #3ee33e;
+  }
+  input {
+    display: inline-block;
+    margin: 1em auto;
+  }
+  .attr {
+    width: 4em;
+  }
   .error {
     color: $error
   }

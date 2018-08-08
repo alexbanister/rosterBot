@@ -10,7 +10,8 @@ export class PlayerInput extends Component {
       lastName: props.lastName || '',
       speed: props.speed || 0,
       stregnth: props.stregnth || 0,
-      agility: props.agility || 0
+      agility: props.agility || 0,
+      role: props.role
     };
   }
 
@@ -22,7 +23,7 @@ export class PlayerInput extends Component {
 
   keepAsNumber(num) {
     num = num ? num : 0;
-    return parseInt(num);
+    return parseInt(num, 10);
   }
 
   getStatTotal({ speed, agility, stregnth }){
@@ -40,6 +41,7 @@ export class PlayerInput extends Component {
             placeholder='First Name'
             value={this.state.firstName}
             onChange={(event) => this.handleChange('firstName', event)}
+            onBlur={() => this.props.savePlayer(this.state)}
           />
         </td>
         <td>
@@ -48,6 +50,7 @@ export class PlayerInput extends Component {
             placeholder='Last Name'
             value={this.state.lastName}
             onChange={(event) => this.handleChange('lastName', event)}
+            onBlur={() => this.props.savePlayer(this.state)}
           />
         </td>
         <td>
@@ -56,6 +59,7 @@ export class PlayerInput extends Component {
             className='attr'
             value={this.state.speed}
             onChange={(event) => this.handleChange('speed', event)}
+            onBlur={() => this.props.savePlayer(this.state)}
           />
         </td>
         <td>
@@ -64,6 +68,7 @@ export class PlayerInput extends Component {
             className='attr'
             value={this.state.stregnth}
             onChange={(event) => this.handleChange('stregnth', event)}
+            onBlur={() => this.props.savePlayer(this.state)}
           />
         </td>
         <td>
@@ -72,6 +77,7 @@ export class PlayerInput extends Component {
             className='attr'
             value={this.state.agility}
             onChange={(event) => this.handleChange('agility', event)}
+            onBlur={() => this.props.savePlayer(this.state)}
           />
         </td>
         <td>
@@ -87,7 +93,9 @@ PlayerInput.propTypes ={
   lastName: PropTypes.string,
   speed: PropTypes.number,
   stregnth: PropTypes.number,
-  agility: PropTypes.number
+  agility: PropTypes.number,
+  role: PropTypes.string,
+  savePlayer: PropTypes.func
 };
 
 export default PlayerInput;

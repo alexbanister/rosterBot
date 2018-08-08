@@ -1,2 +1,12 @@
+.playerInput .form-block {
+  border: 1px solid #3ee33e; }
+
+.playerInput input {
+  display: inline-block;
+  margin: 1em auto; }
+
+.playerInput .attr {
+  width: 4em; }
+
 .playerInput .error {
   color: #c24242; }

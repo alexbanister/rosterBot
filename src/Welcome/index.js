@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CreateTeam from '../CreateTeam/';
-import CreateRoster from '../CreateRoster/';
+import RosterEditable from '../RosterEditable/';
 import { connect } from 'react-redux';
 import './styles.css';
 
 const Welcome = ({ teamName }) => {
   const setFormStep = (teamName) => {
-    return teamName ? <CreateTeam /> : <CreateRoster />;
+    return teamName ? <CreateTeam /> : <RosterEditable />;
   };
 
   return (

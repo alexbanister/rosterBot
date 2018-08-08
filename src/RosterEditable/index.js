@@ -4,25 +4,40 @@ import { connect } from 'react-redux';
 import { saveTeamName } from './actions';
 import PlayerInput from '../PlayerInput';
 
-export class CreateRoster extends Component {
-  constructor() {
+export class RosterEditable extends Component {
+  constructor({...props}) {
     super();
     this.state = {
-      starterCount: 10,
-      subCount: 5
+      starterCount: 3,
+      subCount: 1,
+      rosterName: props.rosterName || '',
+      players: props.players || []
     };
   }
 
   handleChange(event){
     this.setState({
-      teamName: event.target.value
+      rosterName: event.target.value
     });
   }
 
-  buildPlayerForm(count){
+  savePlayer(player, key) {
+    const roster = Object.assign({}, this.state.roster, { [key]: player });
+    this.setState({
+      roster
+    });
+  }
+
+  buildPlayerForm(count, role){
     const form = [];
     for (let iter = 0; iter < count; iter++) {
-      form.push(<PlayerInput key={iter} />);
+      const key = `${role}${iter}`;
+      form.push(
+        <PlayerInput
+          key={key}
+          role={role}
+          savePlayer={(player) => this.savePlayer(player, key)}
+        />);
     }
     return form;
   }
@@ -55,11 +70,16 @@ export class CreateRoster extends Component {
     return (
       <div className='createRoster'>
         <h3>Create a Roster</h3>
-        <form onSubmit={(event) => this.saveTeamName(event, this.state.teamName)}>
+        <form onSubmit={(event) => {
+          event.preventDefault();
+          console.log('hi')
+        }
+        }>
           <div className='form-block'>
             <input
               type='text'
               placeholder='Roster Name'
+              value={this.state.rosterName}
               onChange={(event) => this.handleChange(event)}
             />
           </div>
@@ -67,18 +87,17 @@ export class CreateRoster extends Component {
           <table className='form-block'>
             { tableHead }
             <tbody>
-              { this.buildPlayerForm(this.state.starterCount)}
+              { this.buildPlayerForm(this.state.starterCount, 'starter')}
             </tbody>
           </table>
           <h4>Subsitutes</h4>
           <table className='form-block'>
             { tableHead }
             <tbody>
-              { this.buildPlayerForm(this.state.subCount)}
+              { this.buildPlayerForm(this.state.subCount, 'sub')}
             </tbody>
           </table>
-          <button type='submit'
-            disabled={!this.state.teamName}>
+          <button type='submit'>
               Create Team
           </button>
         </form>
@@ -87,9 +106,9 @@ export class CreateRoster extends Component {
   }
 }
 
-CreateRoster.propTypes ={
-  saveTeamName: PropTypes.func,
-  teamName: PropTypes.string
+RosterEditable.propTypes ={
+  rosterName: PropTypes.string,
+  players: PropTypes.array
 };
 
 const mapDispatchToProps = (dispatch) => ({
@@ -98,4 +117,4 @@ const mapDispatchToProps = (dispatch) => ({
   }
 });
 
-export default connect(null, mapDispatchToProps)(CreateRoster);
+export default connect(null, mapDispatchToProps)(RosterEditable);
