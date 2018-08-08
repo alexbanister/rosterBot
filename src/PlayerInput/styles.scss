@@ -11,7 +11,37 @@
   .attr {
     width: 4em;
   }
-  .error {
-    color: $error
+  .errorMessage {
+    visibility: hidden;
+    img {
+      width: 1.5em;
+    }
+  }
+}
+.error {
+  background: $error;
+  .errorMessage {
+    visibility: visible;
+  }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 20em;
+      top: 100%;
+      left: 50%;
+      margin-left: -11em;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      border-radius: .5em;
+      position: absolute;
+      z-index: 1;
+  }
+  .tooltip:hover .tooltiptext {
+      visibility: visible;
   }
 }

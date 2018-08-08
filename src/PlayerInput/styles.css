@@ -8,5 +8,30 @@
 .playerInput .attr {
   width: 4em; }
 
-.playerInput .error {
-  color: #c24242; }
+.playerInput .errorMessage {
+  visibility: hidden; }
+  .playerInput .errorMessage img {
+    width: 1.5em; }
+
+.error {
+  background: #c24242; }
+  .error .errorMessage {
+    visibility: visible; }
+  .error .tooltip {
+    position: relative;
+    display: inline-block; }
+  .error .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 20em;
+    top: 100%;
+    left: 50%;
+    margin-left: -11em;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    border-radius: .5em;
+    position: absolute;
+    z-index: 1; }
+  .error .tooltip:hover .tooltiptext {
+    visibility: visible; }
