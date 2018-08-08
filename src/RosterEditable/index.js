@@ -10,6 +10,7 @@ export class RosterEditable extends Component {
     this.state = {
       starterCount: 3,
       subCount: 1,
+      rosterNameError: 'clean',
       errorMessages: {
         duplicateName: 'Player names must be unique',
         statOverMax: 'Total of all stats must be less than 100',
@@ -94,6 +95,28 @@ export class RosterEditable extends Component {
     });
   }
 
+  checkRosterName(name) {
+    this.setState({
+      rosterNameError: !name ? 'error' : 'clean'
+    });
+  }
+
+  validateRoster(name, roster, errors, size) {
+    if (!name){
+      return true;
+    }
+    if (Object.keys(roster).length !== size) {
+      return true;
+    }
+    const hasError = Object.keys(errors).filter(key => {
+      return errors[key].isError === true;
+    });
+    if (hasError.length > 0) {
+      return true;
+    }
+    return false;
+  }
+
   getStatTotal({ speed, agility, strength }){
     const total = this.keepAsNumber(speed) + this.keepAsNumber(agility) + this.keepAsNumber(strength);
     const ifError = total > 100 ? 'error' : 'clean';
@@ -157,12 +180,13 @@ export class RosterEditable extends Component {
           event.preventDefault();
         }
         }>
-          <div className='form-block'>
+          <div className={`form-block ${this.state.rosterNameError}`}>
             <input
               type='text'
               placeholder='Roster Name'
               value={this.state.rosterName}
               onChange={(event) => this.handleChange(event)}
+              onBlur={() => this.checkRosterName(this.state.rosterName)}
             />
           </div>
           <h4>Starters</h4>
@@ -179,8 +203,15 @@ export class RosterEditable extends Component {
               { this.buildPlayerForm(this.state.subCount, 'sub')}
             </tbody>
           </table>
-          <button type='submit'>
-              Create Team
+          <button
+            type='submit'
+            disabled={this.validateRoster(
+              this.state.rosterName,
+              this.state.roster,
+              this.state.errors,
+              this.state.starterCount + this.state.subCount)}
+          >
+              Save Roster
           </button>
         </form>
       </div>
