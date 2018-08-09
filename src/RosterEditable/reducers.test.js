@@ -23,4 +23,13 @@ describe('RosterEditable Reducers', () => {
 
     expect(reducers.rosters(undefined, action)).toEqual([action.roster]);
   });
+
+  it('rostersID should update', () => {
+    const action = {
+      type: 'UPDATE_ROSTER_ID'
+    };
+
+    expect(reducers.rostersID(undefined, action)).toEqual({ id: 1 });
+    expect(reducers.rostersID({ id: 3 }, action)).toEqual({ id: 4 });
+  });
 });

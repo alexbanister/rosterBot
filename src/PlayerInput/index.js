@@ -11,7 +11,7 @@ export class PlayerInput extends Component {
       speed: props.speed || 0,
       strength: props.strength || 0,
       agility: props.agility || 0,
-      role: props.role
+      role: props.playerRole
     };
   }
 
@@ -122,12 +122,13 @@ export class PlayerInput extends Component {
 }
 
 PlayerInput.propTypes ={
+  name: PropTypes.string,
   firstName: PropTypes.string,
   lastName: PropTypes.string,
   speed: PropTypes.number,
   strength: PropTypes.number,
   agility: PropTypes.number,
-  role: PropTypes.string,
+  playerRole: PropTypes.string,
   errorMessage: PropTypes.array,
   error: PropTypes.bool,
   savePlayer: PropTypes.func,

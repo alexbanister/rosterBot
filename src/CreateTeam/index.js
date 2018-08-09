@@ -30,6 +30,7 @@ export class CreateTeam extends Component {
           <input
             type='text'
             placeholder='Team Name'
+            name='teamName'
             onChange={(event) => this.handleChange(event)}
           />
           <button type='submit'

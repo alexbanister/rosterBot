@@ -7,7 +7,7 @@ export const rosters = (store = [], action) => {
   }
 };
 
-export const rostersID = (store = { id: 1 }, action) => {
+export const rostersID = (store = { id: 0 }, action) => {
   switch (action.type) {
   case 'UPDATE_ROSTER_ID':
     return Object.assign({}, { id: store.id + 1 });

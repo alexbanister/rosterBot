@@ -138,7 +138,7 @@ export class RosterEditable extends Component {
         <PlayerInput
           key={key}
           name={key}
-          role={role}
+          playerRole={role}
           error={isError}
           errorMessage={errorMessages}
           validatePlayer={(player) => this.validatePlayer(player, key)}
@@ -211,6 +211,7 @@ export class RosterEditable extends Component {
             <input
               type='text'
               placeholder='Roster Name'
+              name='rosterName'
               value={this.state.rosterName}
               onChange={(event) => this.handleChange(event)}
               onBlur={() => this.checkRosterName(this.state.rosterName)}

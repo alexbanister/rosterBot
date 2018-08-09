@@ -1,5 +1,124 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`RosterEditable Container should always match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Connect(RosterEditable)
+    store={
+        Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "rosterID": 1,
+      "rosterName": undefined,
+      "rosters": undefined,
+      "saveRoster": [Function],
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "storeSubscription": Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
+      },
+      "updateRosterID": [Function],
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "rosterID": 1,
+        "rosterName": undefined,
+        "rosters": undefined,
+        "saveRoster": [Function],
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "storeSubscription": Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          },
+          "unsubscribe": [Function],
+        },
+        "updateRosterID": [Function],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
 exports[`RosterEditable should always match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
@@ -28,6 +147,7 @@ ShallowWrapper {
                     className="form-block clean"
           >
                     <input
+                              name="rosterName"
                               onBlur={[Function]}
                               onChange={[Function]}
                               placeholder="Roster Name"
@@ -68,7 +188,7 @@ ShallowWrapper {
                                         error={false}
                                         errorMessage={Array []}
                                         name="starter0"
-                                        role="starter"
+                                        playerRole="starter"
                                         savePlayer={[Function]}
                                         validatePlayer={[Function]}
                               />
@@ -107,7 +227,7 @@ ShallowWrapper {
                                         error={false}
                                         errorMessage={Array []}
                                         name="sub0"
-                                        role="sub"
+                                        playerRole="sub"
                                         savePlayer={[Function]}
                                         validatePlayer={[Function]}
                               />
@@ -145,6 +265,7 @@ ShallowWrapper {
               className="form-block clean"
 >
               <input
+                            name="rosterName"
                             onBlur={[Function]}
                             onChange={[Function]}
                             placeholder="Roster Name"
@@ -185,7 +306,7 @@ ShallowWrapper {
                                           error={false}
                                           errorMessage={Array []}
                                           name="starter0"
-                                          role="starter"
+                                          playerRole="starter"
                                           savePlayer={[Function]}
                                           validatePlayer={[Function]}
                             />
@@ -224,7 +345,7 @@ ShallowWrapper {
                                           error={false}
                                           errorMessage={Array []}
                                           name="sub0"
-                                          role="sub"
+                                          playerRole="sub"
                                           savePlayer={[Function]}
                                           validatePlayer={[Function]}
                             />
@@ -246,6 +367,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <input
+                name="rosterName"
                 onBlur={[Function]}
                 onChange={[Function]}
                 placeholder="Roster Name"
@@ -260,6 +382,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "name": "rosterName",
                 "onBlur": [Function],
                 "onChange": [Function],
                 "placeholder": "Roster Name",
@@ -316,7 +439,7 @@ ShallowWrapper {
                                     error={false}
                                     errorMessage={Array []}
                                     name="starter0"
-                                    role="starter"
+                                    playerRole="starter"
                                     savePlayer={[Function]}
                                     validatePlayer={[Function]}
                   />
@@ -462,7 +585,7 @@ ShallowWrapper {
                       error={false}
                       errorMessage={Array []}
                       name="starter0"
-                      role="starter"
+                      playerRole="starter"
                       savePlayer={[Function]}
                       validatePlayer={[Function]}
 />,
@@ -478,7 +601,7 @@ ShallowWrapper {
                       "error": false,
                       "errorMessage": Array [],
                       "name": "starter0",
-                      "role": "starter",
+                      "playerRole": "starter",
                       "savePlayer": [Function],
                       "validatePlayer": [Function],
                     },
@@ -536,7 +659,7 @@ ShallowWrapper {
                                     error={false}
                                     errorMessage={Array []}
                                     name="sub0"
-                                    role="sub"
+                                    playerRole="sub"
                                     savePlayer={[Function]}
                                     validatePlayer={[Function]}
                   />
@@ -682,7 +805,7 @@ ShallowWrapper {
                       error={false}
                       errorMessage={Array []}
                       name="sub0"
-                      role="sub"
+                      playerRole="sub"
                       savePlayer={[Function]}
                       validatePlayer={[Function]}
 />,
@@ -698,7 +821,7 @@ ShallowWrapper {
                       "error": false,
                       "errorMessage": Array [],
                       "name": "sub0",
-                      "role": "sub",
+                      "playerRole": "sub",
                       "savePlayer": [Function],
                       "validatePlayer": [Function],
                     },
@@ -747,6 +870,7 @@ ShallowWrapper {
                         className="form-block clean"
             >
                         <input
+                                    name="rosterName"
                                     onBlur={[Function]}
                                     onChange={[Function]}
                                     placeholder="Roster Name"
@@ -787,7 +911,7 @@ ShallowWrapper {
                                                 error={false}
                                                 errorMessage={Array []}
                                                 name="starter0"
-                                                role="starter"
+                                                playerRole="starter"
                                                 savePlayer={[Function]}
                                                 validatePlayer={[Function]}
                                     />
@@ -826,7 +950,7 @@ ShallowWrapper {
                                                 error={false}
                                                 errorMessage={Array []}
                                                 name="sub0"
-                                                role="sub"
+                                                playerRole="sub"
                                                 savePlayer={[Function]}
                                                 validatePlayer={[Function]}
                                     />
@@ -864,6 +988,7 @@ ShallowWrapper {
                 className="form-block clean"
 >
                 <input
+                                name="rosterName"
                                 onBlur={[Function]}
                                 onChange={[Function]}
                                 placeholder="Roster Name"
@@ -904,7 +1029,7 @@ ShallowWrapper {
                                                 error={false}
                                                 errorMessage={Array []}
                                                 name="starter0"
-                                                role="starter"
+                                                playerRole="starter"
                                                 savePlayer={[Function]}
                                                 validatePlayer={[Function]}
                                 />
@@ -943,7 +1068,7 @@ ShallowWrapper {
                                                 error={false}
                                                 errorMessage={Array []}
                                                 name="sub0"
-                                                role="sub"
+                                                playerRole="sub"
                                                 savePlayer={[Function]}
                                                 validatePlayer={[Function]}
                                 />
@@ -965,6 +1090,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <input
+                  name="rosterName"
                   onBlur={[Function]}
                   onChange={[Function]}
                   placeholder="Roster Name"
@@ -979,6 +1105,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "name": "rosterName",
                   "onBlur": [Function],
                   "onChange": [Function],
                   "placeholder": "Roster Name",
@@ -1035,7 +1162,7 @@ ShallowWrapper {
                                         error={false}
                                         errorMessage={Array []}
                                         name="starter0"
-                                        role="starter"
+                                        playerRole="starter"
                                         savePlayer={[Function]}
                                         validatePlayer={[Function]}
                     />
@@ -1181,7 +1308,7 @@ ShallowWrapper {
                         error={false}
                         errorMessage={Array []}
                         name="starter0"
-                        role="starter"
+                        playerRole="starter"
                         savePlayer={[Function]}
                         validatePlayer={[Function]}
 />,
@@ -1197,7 +1324,7 @@ ShallowWrapper {
                         "error": false,
                         "errorMessage": Array [],
                         "name": "starter0",
-                        "role": "starter",
+                        "playerRole": "starter",
                         "savePlayer": [Function],
                         "validatePlayer": [Function],
                       },
@@ -1255,7 +1382,7 @@ ShallowWrapper {
                                         error={false}
                                         errorMessage={Array []}
                                         name="sub0"
-                                        role="sub"
+                                        playerRole="sub"
                                         savePlayer={[Function]}
                                         validatePlayer={[Function]}
                     />
@@ -1401,7 +1528,7 @@ ShallowWrapper {
                         error={false}
                         errorMessage={Array []}
                         name="sub0"
-                        role="sub"
+                        playerRole="sub"
                         savePlayer={[Function]}
                         validatePlayer={[Function]}
 />,
@@ -1417,7 +1544,7 @@ ShallowWrapper {
                         "error": false,
                         "errorMessage": Array [],
                         "name": "sub0",
-                        "role": "sub",
+                        "playerRole": "sub",
                         "savePlayer": [Function],
                         "validatePlayer": [Function],
                       },
