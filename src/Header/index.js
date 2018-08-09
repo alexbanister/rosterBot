@@ -4,21 +4,23 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import './styles.css';
 
-export const Header = () => {
-  if (this.props.rosters.length < 1) {
-    this.props.history.push('/');
+export const Header = (props) => {
+  if (props.location.pathname !== '/' && props.rosters.length < 1) {
+    props.history.push('/');
   }
   return (
     <div className='header'>
       <h1>RosterBot</h1>
-      <h2>{this.props.teamName}</h2>
+      <h2>{props.teamName}</h2>
     </div>
   );
 };
 
 Header.propTypes ={
   teamName: PropTypes.string,
-  rosters: PropTypes.array
+  rosters: PropTypes.array,
+  history: PropTypes.object,
+  location: PropTypes.object
 };
 
 const mapStateToProps =  (store) => ({

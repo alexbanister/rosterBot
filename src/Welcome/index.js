@@ -7,7 +7,7 @@ import './styles.css';
 
 export const Welcome = ({ teamName }) => {
   const setFormStep = (teamName) => {
-    return teamName ? <CreateTeam /> : <RosterEditable />;
+    return !teamName ? <CreateTeam /> : <RosterEditable />;
   };
 
   return (

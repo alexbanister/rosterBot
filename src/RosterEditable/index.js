@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { saveRoster, updateRosterID } from './actions';
 import PlayerInput from '../PlayerInput';
 
@@ -205,6 +206,7 @@ export class RosterEditable extends Component {
           event.preventDefault();
           this.props.saveRoster(this.prepRoster(this.state.rosterName, this.state.roster));
           this.props.updateRosterID();
+          this.props.history.push('/rosters');
         }
         }>
           <div className={`form-block ${this.state.rosterNameError}`}>
@@ -252,11 +254,12 @@ RosterEditable.propTypes ={
   roster: PropTypes.object,
   rosterID: PropTypes.number,
   saveRoster: PropTypes.func,
-  updateRosterID: PropTypes.func
+  updateRosterID: PropTypes.func,
+  history: PropTypes.object
 };
 
 const mapStateToProps =  (store) => ({
-  rosterName: store.teamName,
+  rosterName: store.rosterName,
   rosters: store.rosters,
   rosterID: store.rostersID.id
 });
@@ -270,4 +273,4 @@ const mapDispatchToProps = (dispatch) => ({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(RosterEditable);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(RosterEditable));

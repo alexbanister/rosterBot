@@ -1,11 +1,11 @@
 import { shallow } from 'enzyme';
-import { Header } from './index';
+import { Rosters } from './index';
 import React from 'react';
 
 
-describe('Header', () => {
+describe('Rosters', () => {
   it('should always match the snapshot', () => {
-    const wrapper = shallow(<Header />);
+    const wrapper = shallow(<Rosters />);
 
     expect(wrapper).toMatchSnapshot();
   });
