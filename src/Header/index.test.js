@@ -1,11 +1,11 @@
 import { shallow } from 'enzyme';
-import { Welcome } from './index';
+import { Header } from './index';
 import React from 'react';
 
 
-describe('Welcome', () => {
+describe('Header', () => {
   it('should always match the snapshot', () => {
-    const wrapper = shallow(<Welcome />);
+    const wrapper = shallow(<Header location={{ pathname: '/' }}/>);
 
     expect(wrapper).toMatchSnapshot();
   });
