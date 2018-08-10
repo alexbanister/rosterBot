@@ -8,7 +8,6 @@ import PlayerInput from '../PlayerInput';
 export class RosterEditable extends Component {
   constructor(props) {
     super(props);
-    console.log(props.match);
     this.state = {
       starterCount: 1,
       subCount: 1,
@@ -189,12 +188,9 @@ export class RosterEditable extends Component {
 
   sendRoster(rosterName, roster, id) {
     const prepped = this.prepRoster(rosterName, roster, this.state.rosterID);
-    console.log('here', id);
     if (id) {
-      console.log('has id');
       this.props.updateRoster(prepped);
     } else {
-      console.log('no id');
       this.props.saveRoster(prepped);
       this.props.updateRosterID();
     }
@@ -232,7 +228,6 @@ export class RosterEditable extends Component {
         <h3>Create a Roster</h3>
         <form onSubmit={(event) => {
           event.preventDefault();
-          console.log('The ID', this.props.match.params.id);
           this.sendRoster(this.state.rosterName, this.state.roster, this.props.match.params.id);
         }
         }>

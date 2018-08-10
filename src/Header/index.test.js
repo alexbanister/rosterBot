@@ -5,7 +5,7 @@ import React from 'react';
 
 describe('Header', () => {
   it('should always match the snapshot', () => {
-    const wrapper = shallow(<Header />);
+    const wrapper = shallow(<Header location={{ pathname: '/' }}/>);
 
     expect(wrapper).toMatchSnapshot();
   });

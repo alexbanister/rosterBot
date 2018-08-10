@@ -1,12 +1,14 @@
 import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
+import createRouterContext from 'react-router-test-context';
 import RosterEditableContainer, { RosterEditable } from './index';
 import React from 'react';
 
 
 describe('RosterEditable', () => {
   it('should always match the snapshot', () => {
-    const wrapper = shallow(<RosterEditable />);
+    const context = createRouterContext();
+    const wrapper = shallow(<RosterEditable rosters={[]} match={{ params: {}}}/>, { context });
 
     expect(wrapper).toMatchSnapshot();
   });
@@ -21,6 +23,7 @@ describe('RosterEditable', () => {
     expect(wrapper).toMatchSnapshot();
   });
   it('should update state', () => {
+    const context = createRouterContext();
     const initialState = {
       starterCount: 1,
       subCount: 1,
@@ -49,7 +52,7 @@ describe('RosterEditable', () => {
       rosterName: 'My Awesome Roster',
       roster: {}
     };
-    const wrapper = shallow(<RosterEditable />);
+    const wrapper = shallow(<RosterEditable rosters={[]} match={{ params: {}}}/>, { context });
 
     expect(wrapper.state()).toEqual(initialState);
 
