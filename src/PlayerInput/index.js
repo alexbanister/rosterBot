@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 export class PlayerInput extends Component {
-  constructor({...props}) {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       firstName: props.firstName || '',
       lastName: props.lastName || '',
@@ -69,7 +69,7 @@ export class PlayerInput extends Component {
             name={`${this.props.name}Speed`}
             className='attr'
             value={this.state.speed}
-            onChange={(event) => this.handleChange('speed', this.keepAsNumber(event.target.value, 10))}
+            onChange={(event) => this.handleChange('speed', this.keepAsNumber(event.target.value))}
             onBlur={() => {
               this.props.savePlayer(this.state);
               this.props.validatePlayer(this.state);
@@ -82,7 +82,7 @@ export class PlayerInput extends Component {
             name={`${this.props.name}Strength`}
             className='attr'
             value={this.state.strength}
-            onChange={(event) => this.handleChange('strength', this.keepAsNumber(event.target.value, 10))}
+            onChange={(event) => this.handleChange('strength', this.keepAsNumber(event.target.value))}
             onBlur={() => {
               this.props.savePlayer(this.state);
               this.props.validatePlayer(this.state);
@@ -95,7 +95,7 @@ export class PlayerInput extends Component {
             name={`${this.props.name}Agility`}
             className='attr'
             value={this.state.agility}
-            onChange={(event) => this.handleChange('agility', this.keepAsNumber(event.target.value, 10))}
+            onChange={(event) => this.handleChange('agility', this.keepAsNumber(event.target.value))}
             onBlur={() => {
               this.props.savePlayer(this.state);
               this.props.validatePlayer(this.state);

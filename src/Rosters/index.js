@@ -1,9 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { removeRoster } from '../RosterEditable/actions';
 import { connect } from 'react-redux';
 import './styles.css';
 
-export const Rosters = ({ rosters, history }) => {
+export const Rosters = ({ rosters, history, removeRoster }) => {
+  const sortByRole = (roster, role) => {
+    const newList = Object.keys(roster).filter(player => {
+      return roster[player].role === role;
+    });
+    return newList.map(player => {
+      return roster[player];
+    });
+  };
+
   const displayPlayers = (players) => {
     const keys = Object.keys(players);
     return keys.map(key => {
@@ -38,10 +48,29 @@ export const Rosters = ({ rosters, history }) => {
       return (
         <div className='roster' key={`${roster.name}${iter}`}>
           <h4>{roster.name}</h4>
+          <button
+            onClick={() => {
+              history.push(`/editRoster/${roster.id}`);
+            }}>Edit</button>
+          <button
+            onClick={() => {
+              removeRoster(roster.id);
+            }}>Remove</button>
           <table>
             {tableHead}
             <tbody>
-              {displayPlayers(roster.roster)}
+              <tr>
+                <td colSpan='7'>
+                  Starters
+                </td>
+              </tr>
+              {displayPlayers(sortByRole(roster.roster, 'starter'))}
+              <tr>
+                <td colSpan='7'>
+                  Subs
+                </td>
+              </tr>
+              {displayPlayers(sortByRole(roster.roster, 'sub'))}
             </tbody>
           </table>
         </div>
@@ -64,11 +93,18 @@ export const Rosters = ({ rosters, history }) => {
 
 Rosters.propTypes ={
   rosters: PropTypes.array,
-  history: PropTypes.object
+  history: PropTypes.object,
+  removeRoster: PropTypes.func
 };
 
 const mapStateToProps =  (store) => ({
   rosters: store.rosters
 });
 
-export default connect(mapStateToProps)(Rosters);
+const mapDispatchToProps = (dispatch) => ({
+  removeRoster: (id) => {
+    dispatch(removeRoster(id));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Rosters);
