@@ -25,8 +25,8 @@ describe('RosterEditable', () => {
   it('should update state', () => {
     const context = createRouterContext();
     const initialState = {
-      starterCount: 1,
-      subCount: 1,
+      starterCount: 10,
+      subCount: 5,
       rosterNameError: 'clean',
       errorMessages: {
         duplicateName: 'Player name already taken',
@@ -39,8 +39,8 @@ describe('RosterEditable', () => {
       roster: {}
     };
     const expectation = {
-      starterCount: 1,
-      subCount: 1,
+      starterCount: 10,
+      subCount: 5,
       rosterNameError: 'clean',
       errorMessages: {
         duplicateName: 'Player name already taken',

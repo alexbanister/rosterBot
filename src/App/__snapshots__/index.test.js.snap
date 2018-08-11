@@ -33,11 +33,6 @@ ShallowWrapper {
           <Route
                     component={[Function]}
                     exact={true}
-                    path="/roster/:id"
-          />
-          <Route
-                    component={[Function]}
-                    exact={true}
                     path="/editRoster"
           />
           <Route
@@ -79,11 +74,6 @@ ShallowWrapper {
             <Route
               component={[Function]}
               exact={true}
-              path="/roster/:id"
-/>,
-            <Route
-              component={[Function]}
-              exact={true}
               path="/editRoster"
 />,
             <Route
@@ -116,19 +106,6 @@ ShallowWrapper {
               "component": [Function],
               "exact": true,
               "path": "/rosters",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "Roster",
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "exact": true,
-              "path": "/roster/:id",
             },
             "ref": null,
             "rendered": null,
@@ -188,11 +165,6 @@ ShallowWrapper {
             <Route
                         component={[Function]}
                         exact={true}
-                        path="/roster/:id"
-            />
-            <Route
-                        component={[Function]}
-                        exact={true}
                         path="/editRoster"
             />
             <Route
@@ -234,11 +206,6 @@ ShallowWrapper {
               <Route
                 component={[Function]}
                 exact={true}
-                path="/roster/:id"
-/>,
-              <Route
-                component={[Function]}
-                exact={true}
                 path="/editRoster"
 />,
               <Route
@@ -271,19 +238,6 @@ ShallowWrapper {
                 "component": [Function],
                 "exact": true,
                 "path": "/rosters",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "Roster",
-              "nodeType": "class",
-              "props": Object {
-                "component": [Function],
-                "exact": true,
-                "path": "/roster/:id",
               },
               "ref": null,
               "rendered": null,

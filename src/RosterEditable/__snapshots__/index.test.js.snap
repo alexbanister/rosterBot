@@ -137,6 +137,78 @@ ShallowWrapper {
                                         savePlayer={[Function]}
                                         validatePlayer={[Function]}
                               />
+                              <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter1"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                              />
+                              <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter2"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                              />
+                              <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter3"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                              />
+                              <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter4"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                              />
+                              <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter5"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                              />
+                              <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter6"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                              />
+                              <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter7"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                              />
+                              <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter8"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                              />
+                              <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter9"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                              />
                     </tbody>
           </table>
           <h4>
@@ -176,16 +248,49 @@ ShallowWrapper {
                                         savePlayer={[Function]}
                                         validatePlayer={[Function]}
                               />
+                              <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="sub1"
+                                        playerRole="sub"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                              />
+                              <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="sub2"
+                                        playerRole="sub"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                              />
+                              <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="sub3"
+                                        playerRole="sub"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                              />
+                              <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="sub4"
+                                        playerRole="sub"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                              />
                     </tbody>
           </table>
           <button
+                    disabled={true}
                     type="submit"
           >
                     Save Roster
           </button>
 </form>,
       ],
-      "className": "createRoster",
+      "className": "RosterEditable",
     },
     "ref": null,
     "rendered": Array [
@@ -255,6 +360,78 @@ ShallowWrapper {
                                           savePlayer={[Function]}
                                           validatePlayer={[Function]}
                             />
+                            <PlayerInput
+                                          error={false}
+                                          errorMessage={Array []}
+                                          name="starter1"
+                                          playerRole="starter"
+                                          savePlayer={[Function]}
+                                          validatePlayer={[Function]}
+                            />
+                            <PlayerInput
+                                          error={false}
+                                          errorMessage={Array []}
+                                          name="starter2"
+                                          playerRole="starter"
+                                          savePlayer={[Function]}
+                                          validatePlayer={[Function]}
+                            />
+                            <PlayerInput
+                                          error={false}
+                                          errorMessage={Array []}
+                                          name="starter3"
+                                          playerRole="starter"
+                                          savePlayer={[Function]}
+                                          validatePlayer={[Function]}
+                            />
+                            <PlayerInput
+                                          error={false}
+                                          errorMessage={Array []}
+                                          name="starter4"
+                                          playerRole="starter"
+                                          savePlayer={[Function]}
+                                          validatePlayer={[Function]}
+                            />
+                            <PlayerInput
+                                          error={false}
+                                          errorMessage={Array []}
+                                          name="starter5"
+                                          playerRole="starter"
+                                          savePlayer={[Function]}
+                                          validatePlayer={[Function]}
+                            />
+                            <PlayerInput
+                                          error={false}
+                                          errorMessage={Array []}
+                                          name="starter6"
+                                          playerRole="starter"
+                                          savePlayer={[Function]}
+                                          validatePlayer={[Function]}
+                            />
+                            <PlayerInput
+                                          error={false}
+                                          errorMessage={Array []}
+                                          name="starter7"
+                                          playerRole="starter"
+                                          savePlayer={[Function]}
+                                          validatePlayer={[Function]}
+                            />
+                            <PlayerInput
+                                          error={false}
+                                          errorMessage={Array []}
+                                          name="starter8"
+                                          playerRole="starter"
+                                          savePlayer={[Function]}
+                                          validatePlayer={[Function]}
+                            />
+                            <PlayerInput
+                                          error={false}
+                                          errorMessage={Array []}
+                                          name="starter9"
+                                          playerRole="starter"
+                                          savePlayer={[Function]}
+                                          validatePlayer={[Function]}
+                            />
               </tbody>
 </table>,
             <h4>
@@ -294,9 +471,42 @@ ShallowWrapper {
                                           savePlayer={[Function]}
                                           validatePlayer={[Function]}
                             />
+                            <PlayerInput
+                                          error={false}
+                                          errorMessage={Array []}
+                                          name="sub1"
+                                          playerRole="sub"
+                                          savePlayer={[Function]}
+                                          validatePlayer={[Function]}
+                            />
+                            <PlayerInput
+                                          error={false}
+                                          errorMessage={Array []}
+                                          name="sub2"
+                                          playerRole="sub"
+                                          savePlayer={[Function]}
+                                          validatePlayer={[Function]}
+                            />
+                            <PlayerInput
+                                          error={false}
+                                          errorMessage={Array []}
+                                          name="sub3"
+                                          playerRole="sub"
+                                          savePlayer={[Function]}
+                                          validatePlayer={[Function]}
+                            />
+                            <PlayerInput
+                                          error={false}
+                                          errorMessage={Array []}
+                                          name="sub4"
+                                          playerRole="sub"
+                                          savePlayer={[Function]}
+                                          validatePlayer={[Function]}
+                            />
               </tbody>
 </table>,
             <button
+              disabled={true}
               type="submit"
 >
               Save Roster
@@ -384,6 +594,78 @@ ShallowWrapper {
                                     error={false}
                                     errorMessage={Array []}
                                     name="starter0"
+                                    playerRole="starter"
+                                    savePlayer={[Function]}
+                                    validatePlayer={[Function]}
+                  />
+                  <PlayerInput
+                                    error={false}
+                                    errorMessage={Array []}
+                                    name="starter1"
+                                    playerRole="starter"
+                                    savePlayer={[Function]}
+                                    validatePlayer={[Function]}
+                  />
+                  <PlayerInput
+                                    error={false}
+                                    errorMessage={Array []}
+                                    name="starter2"
+                                    playerRole="starter"
+                                    savePlayer={[Function]}
+                                    validatePlayer={[Function]}
+                  />
+                  <PlayerInput
+                                    error={false}
+                                    errorMessage={Array []}
+                                    name="starter3"
+                                    playerRole="starter"
+                                    savePlayer={[Function]}
+                                    validatePlayer={[Function]}
+                  />
+                  <PlayerInput
+                                    error={false}
+                                    errorMessage={Array []}
+                                    name="starter4"
+                                    playerRole="starter"
+                                    savePlayer={[Function]}
+                                    validatePlayer={[Function]}
+                  />
+                  <PlayerInput
+                                    error={false}
+                                    errorMessage={Array []}
+                                    name="starter5"
+                                    playerRole="starter"
+                                    savePlayer={[Function]}
+                                    validatePlayer={[Function]}
+                  />
+                  <PlayerInput
+                                    error={false}
+                                    errorMessage={Array []}
+                                    name="starter6"
+                                    playerRole="starter"
+                                    savePlayer={[Function]}
+                                    validatePlayer={[Function]}
+                  />
+                  <PlayerInput
+                                    error={false}
+                                    errorMessage={Array []}
+                                    name="starter7"
+                                    playerRole="starter"
+                                    savePlayer={[Function]}
+                                    validatePlayer={[Function]}
+                  />
+                  <PlayerInput
+                                    error={false}
+                                    errorMessage={Array []}
+                                    name="starter8"
+                                    playerRole="starter"
+                                    savePlayer={[Function]}
+                                    validatePlayer={[Function]}
+                  />
+                  <PlayerInput
+                                    error={false}
+                                    errorMessage={Array []}
+                                    name="starter9"
                                     playerRole="starter"
                                     savePlayer={[Function]}
                                     validatePlayer={[Function]}
@@ -534,6 +816,78 @@ ShallowWrapper {
                       savePlayer={[Function]}
                       validatePlayer={[Function]}
 />,
+                    <PlayerInput
+                      error={false}
+                      errorMessage={Array []}
+                      name="starter1"
+                      playerRole="starter"
+                      savePlayer={[Function]}
+                      validatePlayer={[Function]}
+/>,
+                    <PlayerInput
+                      error={false}
+                      errorMessage={Array []}
+                      name="starter2"
+                      playerRole="starter"
+                      savePlayer={[Function]}
+                      validatePlayer={[Function]}
+/>,
+                    <PlayerInput
+                      error={false}
+                      errorMessage={Array []}
+                      name="starter3"
+                      playerRole="starter"
+                      savePlayer={[Function]}
+                      validatePlayer={[Function]}
+/>,
+                    <PlayerInput
+                      error={false}
+                      errorMessage={Array []}
+                      name="starter4"
+                      playerRole="starter"
+                      savePlayer={[Function]}
+                      validatePlayer={[Function]}
+/>,
+                    <PlayerInput
+                      error={false}
+                      errorMessage={Array []}
+                      name="starter5"
+                      playerRole="starter"
+                      savePlayer={[Function]}
+                      validatePlayer={[Function]}
+/>,
+                    <PlayerInput
+                      error={false}
+                      errorMessage={Array []}
+                      name="starter6"
+                      playerRole="starter"
+                      savePlayer={[Function]}
+                      validatePlayer={[Function]}
+/>,
+                    <PlayerInput
+                      error={false}
+                      errorMessage={Array []}
+                      name="starter7"
+                      playerRole="starter"
+                      savePlayer={[Function]}
+                      validatePlayer={[Function]}
+/>,
+                    <PlayerInput
+                      error={false}
+                      errorMessage={Array []}
+                      name="starter8"
+                      playerRole="starter"
+                      savePlayer={[Function]}
+                      validatePlayer={[Function]}
+/>,
+                    <PlayerInput
+                      error={false}
+                      errorMessage={Array []}
+                      name="starter9"
+                      playerRole="starter"
+                      savePlayer={[Function]}
+                      validatePlayer={[Function]}
+/>,
                   ],
                 },
                 "ref": null,
@@ -546,6 +900,150 @@ ShallowWrapper {
                       "error": false,
                       "errorMessage": Array [],
                       "name": "starter0",
+                      "playerRole": "starter",
+                      "savePlayer": [Function],
+                      "validatePlayer": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "starter1",
+                    "nodeType": "class",
+                    "props": Object {
+                      "error": false,
+                      "errorMessage": Array [],
+                      "name": "starter1",
+                      "playerRole": "starter",
+                      "savePlayer": [Function],
+                      "validatePlayer": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "starter2",
+                    "nodeType": "class",
+                    "props": Object {
+                      "error": false,
+                      "errorMessage": Array [],
+                      "name": "starter2",
+                      "playerRole": "starter",
+                      "savePlayer": [Function],
+                      "validatePlayer": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "starter3",
+                    "nodeType": "class",
+                    "props": Object {
+                      "error": false,
+                      "errorMessage": Array [],
+                      "name": "starter3",
+                      "playerRole": "starter",
+                      "savePlayer": [Function],
+                      "validatePlayer": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "starter4",
+                    "nodeType": "class",
+                    "props": Object {
+                      "error": false,
+                      "errorMessage": Array [],
+                      "name": "starter4",
+                      "playerRole": "starter",
+                      "savePlayer": [Function],
+                      "validatePlayer": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "starter5",
+                    "nodeType": "class",
+                    "props": Object {
+                      "error": false,
+                      "errorMessage": Array [],
+                      "name": "starter5",
+                      "playerRole": "starter",
+                      "savePlayer": [Function],
+                      "validatePlayer": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "starter6",
+                    "nodeType": "class",
+                    "props": Object {
+                      "error": false,
+                      "errorMessage": Array [],
+                      "name": "starter6",
+                      "playerRole": "starter",
+                      "savePlayer": [Function],
+                      "validatePlayer": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "starter7",
+                    "nodeType": "class",
+                    "props": Object {
+                      "error": false,
+                      "errorMessage": Array [],
+                      "name": "starter7",
+                      "playerRole": "starter",
+                      "savePlayer": [Function],
+                      "validatePlayer": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "starter8",
+                    "nodeType": "class",
+                    "props": Object {
+                      "error": false,
+                      "errorMessage": Array [],
+                      "name": "starter8",
+                      "playerRole": "starter",
+                      "savePlayer": [Function],
+                      "validatePlayer": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "starter9",
+                    "nodeType": "class",
+                    "props": Object {
+                      "error": false,
+                      "errorMessage": Array [],
+                      "name": "starter9",
                       "playerRole": "starter",
                       "savePlayer": [Function],
                       "validatePlayer": [Function],
@@ -604,6 +1102,38 @@ ShallowWrapper {
                                     error={false}
                                     errorMessage={Array []}
                                     name="sub0"
+                                    playerRole="sub"
+                                    savePlayer={[Function]}
+                                    validatePlayer={[Function]}
+                  />
+                  <PlayerInput
+                                    error={false}
+                                    errorMessage={Array []}
+                                    name="sub1"
+                                    playerRole="sub"
+                                    savePlayer={[Function]}
+                                    validatePlayer={[Function]}
+                  />
+                  <PlayerInput
+                                    error={false}
+                                    errorMessage={Array []}
+                                    name="sub2"
+                                    playerRole="sub"
+                                    savePlayer={[Function]}
+                                    validatePlayer={[Function]}
+                  />
+                  <PlayerInput
+                                    error={false}
+                                    errorMessage={Array []}
+                                    name="sub3"
+                                    playerRole="sub"
+                                    savePlayer={[Function]}
+                                    validatePlayer={[Function]}
+                  />
+                  <PlayerInput
+                                    error={false}
+                                    errorMessage={Array []}
+                                    name="sub4"
                                     playerRole="sub"
                                     savePlayer={[Function]}
                                     validatePlayer={[Function]}
@@ -754,6 +1284,38 @@ ShallowWrapper {
                       savePlayer={[Function]}
                       validatePlayer={[Function]}
 />,
+                    <PlayerInput
+                      error={false}
+                      errorMessage={Array []}
+                      name="sub1"
+                      playerRole="sub"
+                      savePlayer={[Function]}
+                      validatePlayer={[Function]}
+/>,
+                    <PlayerInput
+                      error={false}
+                      errorMessage={Array []}
+                      name="sub2"
+                      playerRole="sub"
+                      savePlayer={[Function]}
+                      validatePlayer={[Function]}
+/>,
+                    <PlayerInput
+                      error={false}
+                      errorMessage={Array []}
+                      name="sub3"
+                      playerRole="sub"
+                      savePlayer={[Function]}
+                      validatePlayer={[Function]}
+/>,
+                    <PlayerInput
+                      error={false}
+                      errorMessage={Array []}
+                      name="sub4"
+                      playerRole="sub"
+                      savePlayer={[Function]}
+                      validatePlayer={[Function]}
+/>,
                   ],
                 },
                 "ref": null,
@@ -774,6 +1336,70 @@ ShallowWrapper {
                     "rendered": null,
                     "type": [Function],
                   },
+                  Object {
+                    "instance": null,
+                    "key": "sub1",
+                    "nodeType": "class",
+                    "props": Object {
+                      "error": false,
+                      "errorMessage": Array [],
+                      "name": "sub1",
+                      "playerRole": "sub",
+                      "savePlayer": [Function],
+                      "validatePlayer": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "sub2",
+                    "nodeType": "class",
+                    "props": Object {
+                      "error": false,
+                      "errorMessage": Array [],
+                      "name": "sub2",
+                      "playerRole": "sub",
+                      "savePlayer": [Function],
+                      "validatePlayer": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "sub3",
+                    "nodeType": "class",
+                    "props": Object {
+                      "error": false,
+                      "errorMessage": Array [],
+                      "name": "sub3",
+                      "playerRole": "sub",
+                      "savePlayer": [Function],
+                      "validatePlayer": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": "sub4",
+                    "nodeType": "class",
+                    "props": Object {
+                      "error": false,
+                      "errorMessage": Array [],
+                      "name": "sub4",
+                      "playerRole": "sub",
+                      "savePlayer": [Function],
+                      "validatePlayer": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
                 ],
                 "type": "tbody",
               },
@@ -786,6 +1412,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Save Roster",
+              "disabled": true,
               "type": "submit",
             },
             "ref": null,
@@ -860,6 +1487,78 @@ ShallowWrapper {
                                                 savePlayer={[Function]}
                                                 validatePlayer={[Function]}
                                     />
+                                    <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter1"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                    />
+                                    <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter2"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                    />
+                                    <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter3"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                    />
+                                    <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter4"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                    />
+                                    <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter5"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                    />
+                                    <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter6"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                    />
+                                    <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter7"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                    />
+                                    <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter8"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                    />
+                                    <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter9"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                    />
                         </tbody>
             </table>
             <h4>
@@ -899,16 +1598,49 @@ ShallowWrapper {
                                                 savePlayer={[Function]}
                                                 validatePlayer={[Function]}
                                     />
+                                    <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="sub1"
+                                                playerRole="sub"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                    />
+                                    <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="sub2"
+                                                playerRole="sub"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                    />
+                                    <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="sub3"
+                                                playerRole="sub"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                    />
+                                    <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="sub4"
+                                                playerRole="sub"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                    />
                         </tbody>
             </table>
             <button
+                        disabled={true}
                         type="submit"
             >
                         Save Roster
             </button>
 </form>,
         ],
-        "className": "createRoster",
+        "className": "RosterEditable",
       },
       "ref": null,
       "rendered": Array [
@@ -978,6 +1710,78 @@ ShallowWrapper {
                                                 savePlayer={[Function]}
                                                 validatePlayer={[Function]}
                                 />
+                                <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter1"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                />
+                                <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter2"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                />
+                                <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter3"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                />
+                                <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter4"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                />
+                                <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter5"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                />
+                                <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter6"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                />
+                                <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter7"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                />
+                                <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter8"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                />
+                                <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="starter9"
+                                                playerRole="starter"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                />
                 </tbody>
 </table>,
               <h4>
@@ -1017,9 +1821,42 @@ ShallowWrapper {
                                                 savePlayer={[Function]}
                                                 validatePlayer={[Function]}
                                 />
+                                <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="sub1"
+                                                playerRole="sub"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                />
+                                <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="sub2"
+                                                playerRole="sub"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                />
+                                <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="sub3"
+                                                playerRole="sub"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                />
+                                <PlayerInput
+                                                error={false}
+                                                errorMessage={Array []}
+                                                name="sub4"
+                                                playerRole="sub"
+                                                savePlayer={[Function]}
+                                                validatePlayer={[Function]}
+                                />
                 </tbody>
 </table>,
               <button
+                disabled={true}
                 type="submit"
 >
                 Save Roster
@@ -1107,6 +1944,78 @@ ShallowWrapper {
                                         error={false}
                                         errorMessage={Array []}
                                         name="starter0"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                    />
+                    <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter1"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                    />
+                    <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter2"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                    />
+                    <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter3"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                    />
+                    <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter4"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                    />
+                    <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter5"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                    />
+                    <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter6"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                    />
+                    <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter7"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                    />
+                    <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter8"
+                                        playerRole="starter"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                    />
+                    <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="starter9"
                                         playerRole="starter"
                                         savePlayer={[Function]}
                                         validatePlayer={[Function]}
@@ -1257,6 +2166,78 @@ ShallowWrapper {
                         savePlayer={[Function]}
                         validatePlayer={[Function]}
 />,
+                      <PlayerInput
+                        error={false}
+                        errorMessage={Array []}
+                        name="starter1"
+                        playerRole="starter"
+                        savePlayer={[Function]}
+                        validatePlayer={[Function]}
+/>,
+                      <PlayerInput
+                        error={false}
+                        errorMessage={Array []}
+                        name="starter2"
+                        playerRole="starter"
+                        savePlayer={[Function]}
+                        validatePlayer={[Function]}
+/>,
+                      <PlayerInput
+                        error={false}
+                        errorMessage={Array []}
+                        name="starter3"
+                        playerRole="starter"
+                        savePlayer={[Function]}
+                        validatePlayer={[Function]}
+/>,
+                      <PlayerInput
+                        error={false}
+                        errorMessage={Array []}
+                        name="starter4"
+                        playerRole="starter"
+                        savePlayer={[Function]}
+                        validatePlayer={[Function]}
+/>,
+                      <PlayerInput
+                        error={false}
+                        errorMessage={Array []}
+                        name="starter5"
+                        playerRole="starter"
+                        savePlayer={[Function]}
+                        validatePlayer={[Function]}
+/>,
+                      <PlayerInput
+                        error={false}
+                        errorMessage={Array []}
+                        name="starter6"
+                        playerRole="starter"
+                        savePlayer={[Function]}
+                        validatePlayer={[Function]}
+/>,
+                      <PlayerInput
+                        error={false}
+                        errorMessage={Array []}
+                        name="starter7"
+                        playerRole="starter"
+                        savePlayer={[Function]}
+                        validatePlayer={[Function]}
+/>,
+                      <PlayerInput
+                        error={false}
+                        errorMessage={Array []}
+                        name="starter8"
+                        playerRole="starter"
+                        savePlayer={[Function]}
+                        validatePlayer={[Function]}
+/>,
+                      <PlayerInput
+                        error={false}
+                        errorMessage={Array []}
+                        name="starter9"
+                        playerRole="starter"
+                        savePlayer={[Function]}
+                        validatePlayer={[Function]}
+/>,
                     ],
                   },
                   "ref": null,
@@ -1269,6 +2250,150 @@ ShallowWrapper {
                         "error": false,
                         "errorMessage": Array [],
                         "name": "starter0",
+                        "playerRole": "starter",
+                        "savePlayer": [Function],
+                        "validatePlayer": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": "starter1",
+                      "nodeType": "class",
+                      "props": Object {
+                        "error": false,
+                        "errorMessage": Array [],
+                        "name": "starter1",
+                        "playerRole": "starter",
+                        "savePlayer": [Function],
+                        "validatePlayer": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": "starter2",
+                      "nodeType": "class",
+                      "props": Object {
+                        "error": false,
+                        "errorMessage": Array [],
+                        "name": "starter2",
+                        "playerRole": "starter",
+                        "savePlayer": [Function],
+                        "validatePlayer": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": "starter3",
+                      "nodeType": "class",
+                      "props": Object {
+                        "error": false,
+                        "errorMessage": Array [],
+                        "name": "starter3",
+                        "playerRole": "starter",
+                        "savePlayer": [Function],
+                        "validatePlayer": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": "starter4",
+                      "nodeType": "class",
+                      "props": Object {
+                        "error": false,
+                        "errorMessage": Array [],
+                        "name": "starter4",
+                        "playerRole": "starter",
+                        "savePlayer": [Function],
+                        "validatePlayer": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": "starter5",
+                      "nodeType": "class",
+                      "props": Object {
+                        "error": false,
+                        "errorMessage": Array [],
+                        "name": "starter5",
+                        "playerRole": "starter",
+                        "savePlayer": [Function],
+                        "validatePlayer": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": "starter6",
+                      "nodeType": "class",
+                      "props": Object {
+                        "error": false,
+                        "errorMessage": Array [],
+                        "name": "starter6",
+                        "playerRole": "starter",
+                        "savePlayer": [Function],
+                        "validatePlayer": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": "starter7",
+                      "nodeType": "class",
+                      "props": Object {
+                        "error": false,
+                        "errorMessage": Array [],
+                        "name": "starter7",
+                        "playerRole": "starter",
+                        "savePlayer": [Function],
+                        "validatePlayer": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": "starter8",
+                      "nodeType": "class",
+                      "props": Object {
+                        "error": false,
+                        "errorMessage": Array [],
+                        "name": "starter8",
+                        "playerRole": "starter",
+                        "savePlayer": [Function],
+                        "validatePlayer": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": "starter9",
+                      "nodeType": "class",
+                      "props": Object {
+                        "error": false,
+                        "errorMessage": Array [],
+                        "name": "starter9",
                         "playerRole": "starter",
                         "savePlayer": [Function],
                         "validatePlayer": [Function],
@@ -1327,6 +2452,38 @@ ShallowWrapper {
                                         error={false}
                                         errorMessage={Array []}
                                         name="sub0"
+                                        playerRole="sub"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                    />
+                    <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="sub1"
+                                        playerRole="sub"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                    />
+                    <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="sub2"
+                                        playerRole="sub"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                    />
+                    <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="sub3"
+                                        playerRole="sub"
+                                        savePlayer={[Function]}
+                                        validatePlayer={[Function]}
+                    />
+                    <PlayerInput
+                                        error={false}
+                                        errorMessage={Array []}
+                                        name="sub4"
                                         playerRole="sub"
                                         savePlayer={[Function]}
                                         validatePlayer={[Function]}
@@ -1477,6 +2634,38 @@ ShallowWrapper {
                         savePlayer={[Function]}
                         validatePlayer={[Function]}
 />,
+                      <PlayerInput
+                        error={false}
+                        errorMessage={Array []}
+                        name="sub1"
+                        playerRole="sub"
+                        savePlayer={[Function]}
+                        validatePlayer={[Function]}
+/>,
+                      <PlayerInput
+                        error={false}
+                        errorMessage={Array []}
+                        name="sub2"
+                        playerRole="sub"
+                        savePlayer={[Function]}
+                        validatePlayer={[Function]}
+/>,
+                      <PlayerInput
+                        error={false}
+                        errorMessage={Array []}
+                        name="sub3"
+                        playerRole="sub"
+                        savePlayer={[Function]}
+                        validatePlayer={[Function]}
+/>,
+                      <PlayerInput
+                        error={false}
+                        errorMessage={Array []}
+                        name="sub4"
+                        playerRole="sub"
+                        savePlayer={[Function]}
+                        validatePlayer={[Function]}
+/>,
                     ],
                   },
                   "ref": null,
@@ -1497,6 +2686,70 @@ ShallowWrapper {
                       "rendered": null,
                       "type": [Function],
                     },
+                    Object {
+                      "instance": null,
+                      "key": "sub1",
+                      "nodeType": "class",
+                      "props": Object {
+                        "error": false,
+                        "errorMessage": Array [],
+                        "name": "sub1",
+                        "playerRole": "sub",
+                        "savePlayer": [Function],
+                        "validatePlayer": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": "sub2",
+                      "nodeType": "class",
+                      "props": Object {
+                        "error": false,
+                        "errorMessage": Array [],
+                        "name": "sub2",
+                        "playerRole": "sub",
+                        "savePlayer": [Function],
+                        "validatePlayer": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": "sub3",
+                      "nodeType": "class",
+                      "props": Object {
+                        "error": false,
+                        "errorMessage": Array [],
+                        "name": "sub3",
+                        "playerRole": "sub",
+                        "savePlayer": [Function],
+                        "validatePlayer": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": "sub4",
+                      "nodeType": "class",
+                      "props": Object {
+                        "error": false,
+                        "errorMessage": Array [],
+                        "name": "sub4",
+                        "playerRole": "sub",
+                        "savePlayer": [Function],
+                        "validatePlayer": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
                   ],
                   "type": "tbody",
                 },
@@ -1509,6 +2762,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Save Roster",
+                "disabled": true,
                 "type": "submit",
               },
               "ref": null,
@@ -1538,7 +2792,7 @@ ShallowWrapper {
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "2s0too",
+            "key": "3382rz",
             "pathname": "/",
             "search": "",
           },
@@ -1548,7 +2802,7 @@ ShallowWrapper {
         "route": Object {
           "location": Object {
             "hash": "",
-            "key": "2s0too",
+            "key": "3382rz",
             "pathname": "/",
             "search": "",
           },
