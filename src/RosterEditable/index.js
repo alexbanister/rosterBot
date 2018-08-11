@@ -9,8 +9,8 @@ export class RosterEditable extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      starterCount: 1,
-      subCount: 1,
+      starterCount: 10,
+      subCount: 5,
       rosterNameError: 'clean',
       errorMessages: {
         duplicateName: 'Player name already taken',
@@ -224,7 +224,7 @@ export class RosterEditable extends Component {
     </thead>;
 
     return (
-      <div className='createRoster'>
+      <div className='RosterEditable'>
         <h3>Create a Roster</h3>
         <form onSubmit={(event) => {
           event.preventDefault();
@@ -257,11 +257,11 @@ export class RosterEditable extends Component {
           </table>
           <button
             type='submit'
-            // disabled={this.validateRoster(
-            //   this.state.rosterName,
-            //   this.state.roster,
-            //   this.state.errors,
-            //   this.state.starterCount + this.state.subCount)}
+            disabled={this.validateRoster(
+              this.state.rosterName,
+              this.state.roster,
+              this.state.errors,
+              this.state.starterCount + this.state.subCount)}
           >
               Save Roster
           </button>

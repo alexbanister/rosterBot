@@ -105,15 +105,17 @@ export class PlayerInput extends Component {
         <td>
           { this.getStatTotal(this.state) }
         </td>
-        <td className='errorMessage'>
-          <div className='tooltip'>
-            <img src={process.env.PUBLIC_URL + '/warning.svg'} alt='Error Icon'/>
-            <span className='tooltiptext'>
-              <h5>Errors!</h5>
-              <ul>
-                {this.displayErrorMessages(this.props.errorMessage)}
-              </ul>
-            </span>
+        <td>
+          <div className='errorMessage'>
+            <div className='tooltip'>
+              <img src={process.env.PUBLIC_URL + '/warning.svg'} alt='Error Icon'/>
+              <span className='tooltiptext'>
+                <h5>Errors!</h5>
+                <ul>
+                  {this.displayErrorMessages(this.props.errorMessage)}
+                </ul>
+              </span>
+            </div>
           </div>
         </td>
       </tr>

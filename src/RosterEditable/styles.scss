@@ -1,5 +1,11 @@
 @import "../variables.scss";
 
-.createRoster {
+.RosterEditable {
   text-align: center;
+  form {
+    flex-direction: column;
+  }
+  td {
+    padding: .25rem;
+  }
 }
