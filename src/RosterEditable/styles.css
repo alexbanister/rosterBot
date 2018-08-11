@@ -1,2 +1,6 @@
-.createRoster {
+.RosterEditable {
   text-align: center; }
+  .RosterEditable form {
+    flex-direction: column; }
+  .RosterEditable td {
+    padding: .25rem; }

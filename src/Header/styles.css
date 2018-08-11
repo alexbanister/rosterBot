@@ -1,3 +1,15 @@
 .header {
-  background: black;
-  color: white; }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 3em;
+  color: #c3d2db;
+  background: #232a2f;
+  background: -moz-linear-gradient(left, #232a2f 0%, #323b42 100%);
+  background: -webkit-linear-gradient(left, #232a2f 0%, #323b42 100%);
+  background: linear-gradient(to right, #232a2f 0%, #323b42 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=1 ); }
+  .header strong {
+    color: #F6D22F; }

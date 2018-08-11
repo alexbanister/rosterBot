@@ -1,17 +1,15 @@
 @import "../variables.scss";
 
 .playerInput {
-  .form-block {
-    border: 1px solid #3ee33e;
-  }
+  border: 2px solid #3ee33e;
   input {
-    display: inline-block;
-    margin: 1em auto;
+    margin: .25em;
   }
   .attr {
     width: 4em;
   }
   .errorMessage {
+    width: 2em;
     visibility: hidden;
     img {
       width: 1.5em;
@@ -19,27 +17,29 @@
   }
 }
 .error {
-  background: $error;
-  .errorMessage {
-    visibility: visible;
+  input {
+    background: $error;
   }
   .tooltip {
+    visibility: visible;
+    cursor: pointer;
     position: relative;
     display: inline-block;
   }
   .tooltip .tooltiptext {
       visibility: hidden;
-      width: 20em;
+      width: 25em;
       top: 100%;
       left: 50%;
-      margin-left: -11em;
-      background-color: black;
-      color: #fff;
+      margin-left: -23.5em;
+      background-color: $body-dark;
+      color: $body-light;
       text-align: center;
       padding: 1em;
       border-radius: .5em;
       position: absolute;
       z-index: 1;
+      box-shadow: 5px 5px 5px $background-dark;
   }
   .tooltip:hover .tooltiptext {
       visibility: visible;

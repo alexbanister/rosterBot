@@ -1,15 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header should always match the snapshot 1`] = `
+exports[`Rosters should always match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Unknown
-    location={
-        Object {
-            "pathname": "/",
-          }
-    }
+    rosters={Array []}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -24,15 +20,18 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1>
-          Roster
-          <strong>
-                    Bot
-          </strong>
-</h1>,
-        <h2 />,
+        <h3>
+          Your Team Rosters
+</h3>,
+        Array [],
+        <button
+          className="addButton"
+          onClick={[Function]}
+>
+          + Add Roster
+</button>,
       ],
-      "className": "header",
+      "className": "rosters",
     },
     "ref": null,
     "rendered": Array [
@@ -41,40 +40,24 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            "Roster",
-            <strong>
-              Bot
-</strong>,
-          ],
+          "children": "Your Team Rosters",
         },
         "ref": null,
-        "rendered": Array [
-          "Roster",
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Bot",
-            },
-            "ref": null,
-            "rendered": "Bot",
-            "type": "strong",
-          },
-        ],
-        "type": "h1",
+        "rendered": "Your Team Rosters",
+        "type": "h3",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": "+ Add Roster",
+          "className": "addButton",
+          "onClick": [Function],
         },
         "ref": null,
-        "rendered": null,
-        "type": "h2",
+        "rendered": "+ Add Roster",
+        "type": "button",
       },
     ],
     "type": "div",
@@ -86,15 +69,18 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
-            Roster
-            <strong>
-                        Bot
-            </strong>
-</h1>,
-          <h2 />,
+          <h3>
+            Your Team Rosters
+</h3>,
+          Array [],
+          <button
+            className="addButton"
+            onClick={[Function]}
+>
+            + Add Roster
+</button>,
         ],
-        "className": "header",
+        "className": "rosters",
       },
       "ref": null,
       "rendered": Array [
@@ -103,40 +89,24 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              "Roster",
-              <strong>
-                Bot
-</strong>,
-            ],
+            "children": "Your Team Rosters",
           },
           "ref": null,
-          "rendered": Array [
-            "Roster",
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Bot",
-              },
-              "ref": null,
-              "rendered": "Bot",
-              "type": "strong",
-            },
-          ],
-          "type": "h1",
+          "rendered": "Your Team Rosters",
+          "type": "h3",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "+ Add Roster",
+            "className": "addButton",
+            "onClick": [Function],
           },
           "ref": null,
-          "rendered": null,
-          "type": "h2",
+          "rendered": "+ Add Roster",
+          "type": "button",
         },
       ],
       "type": "div",

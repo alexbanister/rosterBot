@@ -10,7 +10,7 @@ export const Header = (props) => {
   }
   return (
     <div className='header'>
-      <h1>RosterBot</h1>
+      <h1>Roster<strong>Bot</strong></h1>
       <h2>{props.teamName}</h2>
     </div>
   );

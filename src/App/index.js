@@ -3,7 +3,6 @@ import { Route } from 'react-router-dom';
 import Welcome from '../Welcome/';
 import Header from '../Header/';
 import Rosters from '../Rosters/';
-import Roster from '../Roster/';
 import RosterEditable from '../RosterEditable/';
 import './styles.css';
 
@@ -21,10 +20,6 @@ class App extends Component {
             exact path='/rosters'
             component={Rosters}
             key='Rosters'/>
-          <Route
-            exact path='/roster/:id'
-            component={Roster}
-            key='Roster'/>
           <Route
             exact path='/editRoster'
             component={RosterEditable}

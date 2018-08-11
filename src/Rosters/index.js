@@ -47,26 +47,30 @@ export const Rosters = ({ rosters, history, removeRoster }) => {
     return rosters.map((roster, iter) => {
       return (
         <div className='roster' key={`${roster.name}${iter}`}>
-          <h4>{roster.name}</h4>
-          <button
-            onClick={() => {
-              history.push(`/editRoster/${roster.id}`);
-            }}>Edit</button>
-          <button
-            onClick={() => {
-              removeRoster(roster.id);
-            }}>Remove</button>
+          <h4 className='rosterName'>{roster.name}</h4>
+          <div className='buttonArea'>
+            <button
+              className='editButton'
+              onClick={() => {
+                history.push(`/editRoster/${roster.id}`);
+              }}>Edit</button>
+            <button
+              className='removeButton'
+              onClick={() => {
+                removeRoster(roster.id);
+              }}>Remove</button>
+          </div>
           <table>
             {tableHead}
             <tbody>
               <tr>
-                <td colSpan='7'>
+                <td className='roles' colSpan='7'>
                   Starters
                 </td>
               </tr>
               {displayPlayers(sortByRole(roster.roster, 'starter'))}
               <tr>
-                <td colSpan='7'>
+                <td className='roles' colSpan='7'>
                   Subs
                 </td>
               </tr>
@@ -80,9 +84,10 @@ export const Rosters = ({ rosters, history, removeRoster }) => {
 
   return (
     <div className='rosters'>
-      <h3>Welcome to RosterBot</h3>
+      <h3>Your Team Rosters</h3>
       {displayRosters(rosters)}
       <button
+        className='addButton'
         onClick={() => {
           history.push('/editRoster');
         }}>
