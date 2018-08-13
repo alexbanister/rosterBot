@@ -57,3 +57,13 @@ h4 {
   font-size: 2rem;
   color: $highlight;
 }
+@media (max-width: 915px) {
+  body {
+    font-size: .5em;
+  }
+  input, button, select {
+    font-size: 1em;
+    padding: .5em;
+    height: 2em;
+  }
+}
