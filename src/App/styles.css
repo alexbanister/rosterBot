@@ -55,3 +55,11 @@ h4 {
   text-align: left;
   font-size: 2rem;
   color: #F6D22F; }
+
+@media (max-width: 915px) {
+  body {
+    font-size: .5em; }
+  input, button, select {
+    font-size: 1em;
+    padding: .5em;
+    height: 2em; } }
