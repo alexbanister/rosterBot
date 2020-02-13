@@ -11,6 +11,8 @@ const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ &&
 
 const store = createStore(rootReducer, devTools);
 
+console.log("TESTING COMMITS")
+
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
